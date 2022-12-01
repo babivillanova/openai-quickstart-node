@@ -37,7 +37,6 @@ export default function Home() {
         <form onSubmit={onSubmit}>
           <textarea
           rows="5" cols="80"
-            className='textarea'
             type="text"
             name="animal"
             placeholder="Descreva o caso"
