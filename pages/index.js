@@ -29,9 +29,9 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Lawra | Paralegal </title>
+        <title>Lawra</title>
         <link rel="icon" 
-        // href="/dog.png" 
+        href="/Lawra.png" 
         />
       </Head>
 
