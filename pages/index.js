@@ -15,6 +15,7 @@ export default function Home() {
       },
       body: JSON.stringify({ animal: animalInput }),
     });
+    
     const data = await response.json();
     setResult(data.result);
     setAnimalInput("");
@@ -33,6 +34,7 @@ export default function Home() {
         <h5>Crie uma petição a partir de um resumo</h5>
         <form onSubmit={onSubmit}>
           <textarea
+            className='textarea'
             type="text"
             name="animal"
             placeholder="Enter an animal"

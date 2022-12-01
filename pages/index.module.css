@@ -49,6 +49,11 @@
   margin-bottom: 24px;
   height: 150px;
 
+
+}
+
+.textarea{
+  height: 200px;
 }
 .main ::placeholder {
   color: #8e8ea0;
