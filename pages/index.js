@@ -17,6 +17,8 @@ export default function Home() {
     });
     
     const data = await response.json();
+    
+    data.result.replace(/(?:\r\n|\r|\n)/g, "<br>");
     setResult(data.result);
     setAnimalInput("");
   }
@@ -43,7 +45,9 @@ export default function Home() {
           />
           <input type="submit" value="Gerar petição" />
         </form>
-        <div className={styles.result}>{result}</div>
+        <div className={styles.result}>{
+          result && <div className='result' dangerouslySetInnerHTML={{ __html: result }} />
+        }</div>
       </main>
     </div>
   );
