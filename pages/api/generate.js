@@ -8,11 +8,11 @@ const openai = new OpenAIApi(configuration);
 export default async function (req, res) {
   const completion = await openai.createCompletion({
     model: "text-davinci-003",
-    max_tokens: 10,
+    max_tokens: 200,
     prompt: generatePrompt(req.body.animal),
     temperature: 0.6,
   });
-   res.status(500).json({ result: completion.data.choices[0].text });
+   res.status(200).json({ result: completion.data.choices[0].text });
 }
 
 function generatePrompt(animal) {
