@@ -25,7 +25,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Lawra</title>
-        <link rel="icon" href="/dog.png" />
+        {/* <link rel="icon" href="/dog.png" /> */}
       </Head>
 
       <main className={styles.main}>
@@ -37,11 +37,11 @@ export default function Home() {
             className='textarea'
             type="text"
             name="animal"
-            placeholder="Enter an animal"
+            placeholder="Descreva o caso"
             value={animalInput}
             onChange={(e) => setAnimalInput(e.target.value)}
           />
-          <input type="submit" value="Generate names" />
+          <input type="submit" value="Gerar petição" />
         </form>
         <div className={styles.result}>{result}</div>
       </main>
