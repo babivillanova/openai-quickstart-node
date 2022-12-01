@@ -41,6 +41,7 @@ export default function Home() {
         <h5>Escreva uma petição justídica sobre o caso de:</h5>
         <form onSubmit={onSubmit}>
           <textarea
+            rows="5" cols="80"
             type="text"
             name="animal"
             placeholder="Inserir descrição do caso"
