@@ -13,40 +13,49 @@ export default function Home() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ animal: animalInput }),
+      body: JSON.stringify({ 
+        animal: animalInput 
+      
+      
+      }),
     });
-    
     const data = await response.json();
-    
-    data.result.replace(/(?:\r\n|\r|\n)/g, "<br>");
-    setResult(data.result);
+     data.result.replace(/(?:\r\n|\r|\n)/g, "<br>");
+    setResult(data.result.replace(/(?:\r\n|\r|\n)/g, "<br/>"));
     setAnimalInput("");
+    console.log(data.result);
   }
 
   return (
-    <div>
+    <div className="container">
       <Head>
-        <title>Lawra</title>
-        {/* <link rel="icon" href="/dog.png" /> */}
+        <title>Lawra | Paralegal </title>
+        <link rel="icon" 
+        // href="/dog.png" 
+        />
       </Head>
 
       <main className={styles.main}>
-       
+        {/* <img src="/dog.png" className={styles.icon} /> */}
         <h3>Lawra</h3>
-        <h5>Crie uma petição a partir de um resumo</h5>
+        <h5>Escreva uma petição justídica sobre o caso de:</h5>
         <form onSubmit={onSubmit}>
           <textarea
-          rows="5" cols="80"
             type="text"
             name="animal"
-            placeholder="Descreva o caso"
+            placeholder="Inserir descrição do caso"
             value={animalInput}
             onChange={(e) => setAnimalInput(e.target.value)}
           />
-          <input type="submit" value="Gerar petição" />
+          <input type="submit" value="Gerar resposta" />
         </form>
-        <div className={styles.result}>{
+        <div 
+        // className={styles.result}
+        >{
+          //result as html data
           result && <div className='result' dangerouslySetInnerHTML={{ __html: result }} />
+        
+        
         }</div>
       </main>
     </div>

@@ -18,6 +18,6 @@ export default async function (req, res) {
 function generatePrompt(animal) {
   const capitalizedAnimal =
     animal[0].toUpperCase() + animal.slice(1).toLowerCase();
-  return `Escreva uma petição para o caso de ${capitalizedAnimal}
+  return `Escreva uma petição jurídica para o caso de ${capitalizedAnimal}
 `;
 }
