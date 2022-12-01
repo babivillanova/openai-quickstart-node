@@ -23,15 +23,16 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>OpenAI Quickstart</title>
+        <title>Lawra</title>
         <link rel="icon" href="/dog.png" />
       </Head>
 
       <main className={styles.main}>
-        <img src="/dog.png" className={styles.icon} />
-        <h3>Name my pet</h3>
+       
+        <h3>Lawra</h3>
+        <h5>Crie uma petição a partir de um resumo</h5>
         <form onSubmit={onSubmit}>
-          <input
+          <textarea
             type="text"
             name="animal"
             placeholder="Enter an animal"
