@@ -36,6 +36,7 @@ export default function Home() {
         <h5>Crie uma petição a partir de um resumo</h5>
         <form onSubmit={onSubmit}>
           <textarea
+          rows="5" cols="80"
             className='textarea'
             type="text"
             name="animal"

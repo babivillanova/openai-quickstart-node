@@ -25,6 +25,8 @@
   flex-direction: column;
   align-items: center;
   padding-top: 60px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .main .icon {
   width: 34px;
